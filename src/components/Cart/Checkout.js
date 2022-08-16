@@ -4,7 +4,7 @@ import classes from "./Checkout.module.css";
 
 // Helper functions
 const isEmpty = (value) => value.trim() === "";
-const isFiveChars = (value) => value.trim().length === 5;
+const isFourChars = (value) => value.trim().length === 4;
 
 const Checkout = (props) => {
   const [formInputsValidity, setFormInputsValidity] = useState({
@@ -30,7 +30,7 @@ const Checkout = (props) => {
     const enteredNameIsValid = !isEmpty(enteredName);
     const enteredStreetIsValid = !isEmpty(enteredStreet);
     const enteredCityIsValid = !isEmpty(enteredCity);
-    const enteredPostalIsValid = isFiveChars(enteredPostal);
+    const enteredPostalIsValid = isFourChars(enteredPostal);
 
     setFormInputsValidity({
       name: enteredNameIsValid,
